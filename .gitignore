@@ -1,0 +1,120 @@
+# .gitignore for Java + Markdown Project
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+docs/chapters/*.pdf
+docs/chapters/*.epub
+docs/chapters/*.html
+
+# Logs
+logs/
+*.log
+
+# Temp
+temp/
+*.tmp
+
+# Test coverage
+coverage/
+junit/
+
+# JMH
+jmh-result.*
+
+# Node (for any frontend tooling)
+node_modules/
+
+# Docker
+Dockerfile*
+docker-compose*
+
+# Distribution
+dist/
+assembly/
+
+# Gradle Wrapper
+gradle-wrapper.properties
+
+# IntelliJ
+*.ipr
+*.iws
+*.iml
+
+# VSCode
+.vscode/
+
+# Eclipse
+.classpath
+.project
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# JRebel
+rebel*
+jrebel*
+
+# IntelliJ IDEA
+out/
+*.ipr
+*.iws
+*.iml
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Project specific
+data/
+*.json.bak

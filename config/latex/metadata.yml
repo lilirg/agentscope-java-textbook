@@ -1,0 +1,49 @@
+# LaTeX元数据
+
+> Pandoc编译PDF时使用的元数据
+
+---
+
+```yaml
+title: AI应用开发：从零到AgentScope-Java实战
+author: 超级教材写手
+date: 2026-04-17
+version: v0.1.0-alpha
+lang: zh-CN
+toc: true
+toc-depth: 2
+number-sections: true
+
+# 页边距
+geometry:
+  - margin=1in
+
+# 字体设置
+mainfont: Arial
+sansfont: Arial
+monofont: Courier New
+
+# 段落设置
+indent: true
+parindent: 24pt
+parskip: 12pt
+
+# 链接设置
+linkcolor: blue
+urlcolor: blue
+hypersetup:
+  pdftitle={AI应用开发：从零到AgentScope-Java实战}
+  pdfauthor={超级教材写手}
+
+# 代码块设置
+code-blocks:
+  background-color: #f4f4f4
+  border: 1px solid #ddd
+  padding: 6pt
+  fontfamily: tt
+```
+
+---
+
+> 版本：v0.1.0-alpha  
+> 更新日期：2026-04-17
