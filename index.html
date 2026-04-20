@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AI 应用开发：AgentScope-Java 实战教材</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="AI 应用开发：从零到 AgentScope-Java 实战教材">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* 自定义样式 */
+    :root {
+      --theme-color: #42b983;
+      --border-color: #eaecef;
+      --code-background: #f6f8fa;
+    }
+    
+    .app-name {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .sidebar-nav {
+      font-size: 14px;
+    }
+    
+    .markdown-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    
+    .markdown-section h1 {
+      font-size: 2.5em;
+      border-bottom: 2px solid var(--theme-color);
+      padding-bottom: 10px;
+    }
+    
+    .markdown-section h2 {
+      font-size: 1.8em;
+      border-left: 4px solid var(--theme-color);
+      padding-left: 15px;
+      margin-top: 30px;
+    }
+    
+    .markdown-section h3 {
+      font-size: 1.4em;
+      margin-top: 25px;
+    }
+    
+    .markdown-section code {
+      background: var(--code-background);
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+    
+    .markdown-section pre {
+      background: #282c34;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    .markdown-section pre code {
+      background: transparent;
+      color: #abb2bf;
+    }
+    
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background: #f8f9fa;
+      margin: 20px 0;
+      padding: 15px 20px;
+    }
+    
+    .markdown-section table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    
+    .markdown-section th {
+      background: #f6f8fa;
+      border: 1px solid var(--border-color);
+      padding: 10px 15px;
+      font-weight: 600;
+    }
+    
+    .markdown-section td {
+      border: 1px solid var(--border-color);
+      padding: 10px 15px;
+    }
+    
+    .markdown-section tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+    
+    /* 侧边栏样式 */
+    .sidebar {
+      padding: 20px 0;
+    }
+    
+    .sidebar ul li {
+      margin: 5px 0;
+    }
+    
+    .sidebar ul li a {
+      font-size: 14px;
+      color: #34495e;
+      transition: color 0.3s;
+    }
+    
+    .sidebar ul li a:hover {
+      color: var(--theme-color);
+    }
+    
+    .sidebar ul li.active > a {
+      color: var(--theme-color);
+      font-weight: 600;
+    }
+    
+    /* 章节分组标题 */
+    .app-sub-sidebar li::before {
+      content: "📚";
+      margin-right: 8px;
+    }
+    
+    /* 页脚 */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">正在加载教材...</div>
+  <script>
+    window.$docsify = {
+      // 基础配置
+      name: 'AI 应用开发：AgentScope-Java 实战',
+      repo: 'https://github.com/agentscope-java-textbook',
+      basePath: '',
+      
+      // 路由配置
+      routes: {
+        '^/README.md': 'README.md',
+        '^/chapters/.*': 'chapters/$1'
+      },
+      
+      // 加载配置
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      
+      // 搜索功能
+      search: {
+        paths: 'auto',
+        placeholder: {
+          '/zh-cn/': '搜索文档...',
+          '/': 'Search...'
+        },
+        noData: {
+          '/zh-cn/': '没有找到结果',
+          '/': 'No results found'
+        },
+        depth: 4,
+        hideOtherSidebarContent: false,
+        namespace: 'agentscope-textbook'
+      },
+      
+      // 进度条
+      progress: {
+        position: 'top',
+        color: 'var(--theme-color)',
+        height: '3px'
+      },
+      
+      // 插件
+      plugins: [
+        function(hook, vm) {
+          // 页面加载前
+          hook.beforeEach(function(html) {
+            var url = 'https://github.com/agentscope-java-textbook';
+            var github = '[GitHub](' + url + ')';
+            var editHtml = '📝 [编辑此页](' + url + '/edit/main/docs/' + vm.route.file + ')\n';
+            
+            var content = html;
+            
+            // 添加章节导航
+            if (vm.route.file) {
+              var chapter = vm.route.file.match(/^(.*?\/)([^\/]+)\.md$/);
+              if (chapter) {
+                var prevLink = '';
+                var nextLink = '';
+                content = editHtml + content;
+              }
+            }
+            
+            return content;
+          });
+          
+          // 页面加载后
+          hook.afterEach(function(html) {
+            return html + '\n\n---\n\n> 📖 版本：v0.1.0-alpha | 📅 更新日期：2026-04-17';
+          });
+          
+          // 文档加载完成
+          hook.doneEach(function() {
+            console.log('文档加载完成:', vm.route.file);
+          });
+        }
+      ],
+      
+      // 代码复制
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制'
+      },
+      
+      // 字数统计
+      count: {
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese',
+        isExpected: true
+      },
+      
+      // 分页导航
+      pagination: {
+        previousText: '上一页',
+        nextText: '下一页',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      
+      // 主题切换
+      themeable: {
+        readyTransition: true,
+        responsiveThemes: {}
+      },
+      
+      // 外部链接
+      externalLinkTarget: '_blank',
+      
+      // 相对链接
+      relativePath: true,
+      
+      // 别名
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
+    };
+  </script>
+  
+  <!-- Docsify 核心 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  
+  <!-- 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-count/dist/countable.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable/dist/js/docsify-themeable.min.js"></script>
+  
+  <!-- Mermaid 图表 -->
+  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis'
+      },
+      sequence: {
+        useMaxWidth: true,
+        wrap: true
+      },
+      gantt: {
+        useMaxWidth: true
+      }
+    });
+  </script>
+  
+  <!-- 数学公式 (KaTeX) -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="//cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+</body>
+</html>
