@@ -1,12 +1,43 @@
 # 教材改进任务清单
 
-> 版本：v0.1.0-alpha  
-> 更新日期：2026-04-20  
+> 版本：v0.1.0-alpha
+> 更新日期：2026-04-20
 > 状态：进行中
 
 ---
 
-## 🚀 任务列表
+## 📚 Docsify 静态网站
+
+### 已完成
+
+| 任务 | 文件 | 状态 |
+|------|------|------|
+| 主入口文件 | [`docs/index.html`](docs/index.html:1) | ✅ 已完成 |
+| 侧边栏导航 | [`docs/_sidebar.md`](docs/_sidebar.md:1) | ✅ 已完成 |
+| 封面页面 | [`docs/_coverpage.md`](docs/_coverpage.md:1) | ✅ 已完成 |
+| 导航栏 | [`docs/_navbar.md`](docs/_navbar.md:1) | ✅ 已完成 |
+| 本地服务器脚本 | [`docs/start-server.bat`](docs/start-server.bat:1) | ✅ 已完成 |
+| Docsify 服务器脚本 | [`docs/start-docsify.bat`](docs/start-docsify.bat:1) | ✅ 已完成 |
+| GitHub Actions 部署 | [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml:1) | ✅ 已完成 |
+
+### 站点功能
+- 完整目录导航（4 大部分，13 章）
+- 搜索功能
+- 代码高亮和复制
+- Mermaid 图表支持
+- 数学公式（KaTeX）
+- 分页导航
+- 字数统计
+
+### 访问方式
+- 本地：运行 `docs/start-server.bat` 后访问 `http://localhost:3000`
+- GitHub Pages：配置完成后访问 `https://lilirg.github.io/agentscope-java-textbook/`
+
+---
+
+---
+
+##  任务列表
 
 ### 1. 补全缺失的8个common-traps文件（第5-13章5.5节）⭐⭐⭐
 
@@ -76,9 +107,10 @@
 | Maven 依赖补全 | 4/4 | 4 | 100% |
 | 代码块标识 | 200+/200+ | 200+ | 100% |
 | 标题层级统一 | 200+/200+ | 200+ | 100% |
+| Docsify 网站 | 7/7 | 7 | 100% |
 | 代码示例 | 0/3 | 3 | 0% |
 | 实用性 | 0/3 | 3 | 0% |
-| **总计** | **68/74** | **74** | **92%** |
+| **总计** | **75/81** | **81** | **93%** |
 
 ---
 
@@ -93,14 +125,17 @@
 - [x] 补全 Maven 依赖（4/4完成）
 - [x] 检查代码块标识（200+/200+完成）
 - [x] 检查标题层级统一（200+/200+完成）
+- [x] 创建 Docsify 静态网站（7/7完成）
+- [x] 配置 GitHub Actions 部署工作流
 
 ### 明日（2026-04-21）
 - [ ] 移除TODO注释（替换为完整代码）
 - [ ] 提升实用性（真实数据来源、错误处理示例、部署指导）
+- [ ] 配置 GitHub Pages 设置
 
 ---
 
-> 版本：v0.3.0-alpha  
-> 更新日期：2026-04-20  
-> 负责人：AI Agent（FMzx7o）  
-> **状态更新：common-traps补全、附录生成、TODO优化、API Key清理、图表添加、依赖补全、代码块标识和标题层级检查已完成！**
+> 版本：v0.4.0-alpha
+> 更新日期：2026-04-20
+> 负责人：AI Agent（FMzx7o）
+> **状态更新：common-traps补全、附录生成、TODO优化、API Key清理、图表添加、依赖补全、代码块标识和标题层级检查已完成！Docsify 静态网站已创建并部署到 GitHub。**
