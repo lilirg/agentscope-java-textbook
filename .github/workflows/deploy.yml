@@ -1,8 +1,11 @@
-name: Deploy Pages
+name: Deploy Docsify Site to GitHub Pages
 
 on:
   push:
     branches: [ main ]
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -11,22 +14,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Pandoc
-        run: sudo apt-get install -y pandoc
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-      - name: Compile to HTML
-        run: |
-          mkdir -p dist
-          pandoc docs/chapters/*.md \
-            --from=markdown \
-            --to=html \
-            --output=dist/index.html \
-            --metadata-file=config/latex/metadata.yml \
-            --css=config/latex/styles.css \
-            --standalone
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy Docsify to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./docs
+          publish_branch: gh-pages
