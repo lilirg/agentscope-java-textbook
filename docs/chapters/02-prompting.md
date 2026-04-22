@@ -6,9 +6,9 @@
 
 ---
 
-## 2.1 提示词设计原则
+## 提示词设计原则
 
-### 2.1.1 CRISPE框架
+### CRISPE框架
 
 | 字母 | 含义 | 示例 |
 |------|------|------|
@@ -19,7 +19,7 @@
 | **P** | Persona（人设） | "保持专业但亲切的语气" |
 | **E** | Environment（环境） | "用户是企业高管，时间紧张" |
 
-### 2.1.2 目标驱动 vs 问题驱动
+### 目标驱动 vs 问题驱动
 
 | 类型 | 特点 | 适用场景 |
 |------|------|---------|
@@ -28,9 +28,9 @@
 
 ---
 
-## 2.2 LLM API调用基础
+## LLM API调用基础
 
-### 2.2.1 OpenAI API调用（Java示例）
+### OpenAI API调用（Java示例）
 
 ```java
 // 1. 添加Maven依赖
@@ -56,7 +56,7 @@ ChatCompletionRequest request = ChatCompletionRequest.builder()
 String response = api.createChatCompletion(request).choices().get(0).message().content();
 ```
 
-### 2.2.2 阿里云通义千问API对比
+### 阿里云通义千问API对比
 
 | 功能 | OpenAI API | 通义千问API |
 |------|------------|------------|
@@ -68,9 +68,9 @@ String response = api.createChatCompletion(request).choices().get(0).message().c
 
 ---
 
-## 2.3 错误处理与超时重试
+## 错误处理与超时重试
 
-### 2.3.1 异常处理模式
+### 异常处理模式
 
 ```java
 public String callLLM(ChatCompletionRequest request) {
@@ -90,7 +90,7 @@ public String callLLM(ChatCompletionRequest request) {
 }
 ```
 
-### 2.3.2 重试策略
+### 重试策略
 
 | 场景 | 重试次数 | 间隔 | 备注 |
 |------|---------|------|------|
@@ -100,7 +100,7 @@ public String callLLM(ChatCompletionRequest request) {
 
 ---
 
-## 2.4 实战：调用OpenAI API实现天气查询
+## 实战：调用OpenAI API实现天气查询
 
 ### 任务
 
@@ -144,7 +144,7 @@ public String queryWeather(String city) {
 
 ---
 
-## 2.5 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -155,7 +155,7 @@ public String queryWeather(String city) {
 
 ---
 
-## 2.6 参考资源
+## 参考资源
 
 - **CRISPE框架详解**：`docs/Appendix_Prompting.md`
 - **主流LLM API对比**：`docs/Appendix_API_Comparison.md`
@@ -163,7 +163,7 @@ public String queryWeather(String city) {
 
 ---
 
-## 2.7 本章考核
+## 本章考核
 
 ### 编程题
 

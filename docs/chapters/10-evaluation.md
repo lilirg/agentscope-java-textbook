@@ -6,9 +6,9 @@
 
 ---
 
-## 10.1 评测指标体系
+## 评测指标体系
 
-### 10.1.1 核心评测指标
+### 核心评测指标
 
 | 指标 | 公式 | 说明 | 目标值 |
 |------|------|------|-------|
@@ -18,7 +18,7 @@
 | **平均响应时间** | 总耗时 / 总任务数 | 用户等待时间 | ≤2s |
 | **用户满意度** | NPS = (% promoters - % detractors) | 用户推荐意愿 | ≥40 |
 
-### 10.1.2 JMH性能测试
+### JMH性能测试
 
 ```java
 // 1. 添加依赖
@@ -58,9 +58,9 @@ public class AgentPerformanceTest {
 
 ---
 
-## 10.2 提示词迭代优化
+## 提示词迭代优化
 
-### 10.2.1 优化前后对比
+### 优化前后对比
 
 #### 问题：任务完成率低
 
@@ -89,7 +89,7 @@ public class AgentPerformanceTest {
   输出："上海当前25℃，晴"  
 ```
 
-### 10.2.2 自动化测试框架
+### 自动化测试框架
 
 ```java
 @Service
@@ -148,7 +148,7 @@ class EvaluationResult {
 
 ---
 
-## 10.3 实战：设计Agent评测方案并实施
+## 实战：设计Agent评测方案并实施
 
 ### 任务
 
@@ -224,7 +224,7 @@ public class AgentPerformanceMonitor {
 
 ---
 
-## 10.4 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -234,14 +234,14 @@ public class AgentPerformanceMonitor {
 
 ---
 
-## 10.5 参考资源
+## 参考资源
 
 - **JMH官方文档**：https://openjdk.java.net/projects/code-tools/jmh/  
 - **Agent评测最佳实践**：`docs/Appendix_Evaluation.md`
 
 ---
 
-## 10.6 本章考核
+## 本章考核
 
 ### 编程题
 

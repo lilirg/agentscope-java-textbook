@@ -6,9 +6,9 @@
 
 ---
 
-## 5.1 记忆系统设计
+## 记忆系统设计
 
-### 5.1.1 短期记忆（短期上下文）
+### 短期记忆（短期上下文）
 
 **作用**：保存当前对话的交互历史
 
@@ -57,7 +57,7 @@ private String compress(List<Message> messages) {
 }
 ```
 
-### 5.1.2 长期记忆（用户偏好+知识库）
+### 长期记忆（用户偏好+知识库）
 
 **作用**：保存用户偏好、历史任务、外部知识
 
@@ -99,9 +99,9 @@ public class LongTermMemory {
 
 ---
 
-## 5.2 RAG集成
+## RAG集成
 
-### 5.2.1 RAG基础流程
+### RAG基础流程
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -114,7 +114,7 @@ public class LongTermMemory {
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 5.2.2 向量数据库选择
+### 向量数据库选择
 
 | 数据库 | 优点 | 缺点 | 适用场景 |
 |--------|------|------|---------|
@@ -185,9 +185,9 @@ public class RAGService {
 
 ---
 
-## 5.3 Agent中的记忆应用
+## Agent中的记忆应用
 
-### 5.3.1 记忆驱动的对话优化
+### 记忆驱动的对话优化
 
 **场景**：用户多次询问相同问题
 
@@ -238,7 +238,7 @@ public class MemoryOptimizedAgent {
 }
 ```
 
-### 5.3.2 实战：带记忆的邮件摘要Agent
+### 实战：带记忆的邮件摘要Agent
 
 #### 任务
 
@@ -307,7 +307,7 @@ public class EmailSummarizerAgent {
 
 ---
 
-## 5.4 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -317,7 +317,7 @@ public class EmailSummarizerAgent {
 
 ---
 
-## 5.5 参考资源
+## 参考资源
 
 - **Chroma文档**：https://docs.trychroma.com  
 - **Sentence Transformers**：https://www.sbert.net  
@@ -325,7 +325,7 @@ public class EmailSummarizerAgent {
 
 ---
 
-## 5.6 本章考核
+## 本章考核
 
 ### 编程题
 

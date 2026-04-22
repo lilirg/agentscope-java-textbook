@@ -6,9 +6,9 @@
 
 ---
 
-## 6.1 图片处理
+## 图片处理
 
-### 6.1.1 图像OCR工具集成
+### 图像OCR工具集成
 
 #### Tesseract OCR（Java示例）
 
@@ -52,7 +52,7 @@ public class OCRService {
 }
 ```
 
-### 6.1.2 图片理解（LLM多模态）
+### 图片理解（LLM多模态）
 
 #### OpenAI GPT-4 Vision（Java示例）
 
@@ -90,9 +90,9 @@ public class VisionService {
 
 ---
 
-## 6.2 语音处理
+## 语音处理
 
-### 6.2.1 语音转文本（Whisper）
+### 语音转文本（Whisper）
 
 #### Whisper API（Java示例）
 
@@ -131,7 +131,7 @@ public class SpeechToTextService {
 }
 ```
 
-### 6.2.2 语音合成（Text-to-Speech）
+### 语音合成（Text-to-Speech）
 
 #### OpenAI TTS（Java示例）
 
@@ -174,7 +174,7 @@ public class TextToSpeechService {
 
 ---
 
-## 6.3 实战：构建图文识别Agent
+## 实战：构建图文识别Agent
 
 ### 任务
 
@@ -286,7 +286,7 @@ public class MultimodalController {
 
 ---
 
-## 6.4 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -296,7 +296,7 @@ public class MultimodalController {
 
 ---
 
-## 6.5 参考资源
+## 参考资源
 
 - **Tesseract文档**：https://tesseract-ocr.github.io  
 - **Whisper文档**：https://github.com/ufal/whisper_asr  
@@ -304,7 +304,7 @@ public class MultimodalController {
 
 ---
 
-## 6.6 本章考核
+## 本章考核
 
 ### 编程题
 

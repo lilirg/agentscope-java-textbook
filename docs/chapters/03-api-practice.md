@@ -6,9 +6,9 @@
 
 ---
 
-## 3.1 本地模型部署（LLaMA.cpp/Qwen2）
+## 本地模型部署（LLaMA.cpp/Qwen2）
 
-### 3.1.1 LLaMA.cpp部署步骤
+### LLaMA.cpp部署步骤
 
 | 步骤 | 操作 | 说明 |
 |------|------|------|
@@ -17,7 +17,7 @@
 | 3. 转换模型 | `./examples/qwen2/convert-qwen2-to-gguf.py` | 支持Qwen2模型 |
 | 4. 启动服务 | `./server -m models/qwen2-7b.gguf -c 4096` | 默认端口8080 |
 
-### 3.1.2 Java REST客户端封装
+### Java REST客户端封装
 
 ```java
 // 1. 添加依赖
@@ -61,9 +61,9 @@ public class LocalLLMAPI {
 
 ---
 
-## 3.2 云端API安全实践
+## 云端API安全实践
 
-### 3.2.1 API密钥管理
+### API密钥管理
 
 | 方式 | 安全性 | 推荐场景 |
 |------|--------|---------|
@@ -116,7 +116,7 @@ public class ALIKMS {
 }
 ```
 
-### 3.2.2 访问控制与速率限制
+### 访问控制与速率限制
 
 #### OpenAI速率限制处理
 
@@ -145,7 +145,7 @@ public class RateLimiter {
 
 ---
 
-## 3.3 实战：构建多API切换的天气Agent
+## 实战：构建多API切换的天气Agent
 
 ### 任务
 
@@ -225,7 +225,7 @@ public class WeatherController {
 
 ---
 
-## 3.4 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -235,7 +235,7 @@ public class WeatherController {
 
 ---
 
-## 3.5 参考资源
+## 参考资源
 
 - **LLaMA.cpp文档**：https://github.com/ggerganov/llama.cpp  
 - **通义千问API文档**：https://help.aliyun.com/document_detail/611860.html  
@@ -243,7 +243,7 @@ public class WeatherController {
 
 ---
 
-## 3.6 本章考核
+## 本章考核
 
 ### 编程题
 
