@@ -6,9 +6,9 @@
 
 ---
 
-## 8.1 多Agent协作模式
+## 多Agent协作模式
 
-### 8.1.1 常见协作模式
+### 常见协作模式
 
 | 模式 | 架构 | 适用场景 | 示例 |
 |------|------|---------|------|
@@ -41,7 +41,7 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 8.1.2 Java并发模型对协作的适配
+### Java并发模型对协作的适配
 
 | 协作模式 | Java机制 | 示例 |
 |---------|---------|------|
@@ -89,9 +89,9 @@ public class ManagerAgent {
 
 ---
 
-## 8.2 通信协议与任务调度
+## 通信协议与任务调度
 
-### 8.2.1 消息队列集成
+### 消息队列集成
 
 | 队列系统 | 优点 | 缺点 | AgentScope-Java集成 |
 |---------|------|------|-------------------|
@@ -133,7 +133,7 @@ public class AgentMessageBus {
 }
 ```
 
-### 8.2.2 Agent间状态同步
+### Agent间状态同步
 
 #### 示例：使用Redis同步状态
 
@@ -177,7 +177,7 @@ public class AgentStateSync {
 
 ---
 
-## 8.3 实战：设计销售+客服双Agent协作系统
+## 实战：设计销售+客服双Agent协作系统
 
 ### 任务
 
@@ -296,7 +296,7 @@ public class ServiceAgent {
 
 ---
 
-## 8.4 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -306,14 +306,14 @@ public class ServiceAgent {
 
 ---
 
-## 8.5 参考资源
+## 参考资源
 
 - **AgentScope-Java多Agent文档**：https://agentscope.io/docs/multi-agent  
 - **Kafka Spring Boot集成**：https://docs.spring.io/spring-kafka/docs/current/reference/html/  
 
 ---
 
-## 8.6 本章考核
+## 本章考核
 
 ### 编程题
 

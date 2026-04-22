@@ -1,0 +1,6 @@
+/* 自定义 VitePress 样式 */
+:root {
+  --vp-c-brand: #1c4be6;
+  --vp-c-brand-light: #3f68f0;
+  --vp-c-brand-dark: #1340d3;
+}

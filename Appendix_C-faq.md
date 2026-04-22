@@ -1,10 +1,4 @@
----
-title: 常见问题FAQ
-chapter: Appendix C
-keywords: FAQ, common questions, troubleshooting, setup, deployment, performance
-version: C.0
----
-
+﻿
 # 附录C：常见问题FAQ
 
 > 本附录收集Agent开发中常见的问题与解决方案，帮助用户快速解决问题

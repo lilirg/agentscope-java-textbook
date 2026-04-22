@@ -1,10 +1,4 @@
----
-title: 核心概念速查表
-chapter: Appendix A
-keywords: core concepts, quick reference, agent, memory, tool, planning, execution
-version: A.0
----
-
+﻿
 # 附录A：核心概念速查表
 
 > 本附录提供Agent开发相关核心概念的快速参考，方便开发过程中查阅
