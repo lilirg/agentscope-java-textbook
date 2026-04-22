@@ -66,6 +66,10 @@ jmh-result.*
 # Node (for any frontend tooling)
 node_modules/
 
+# VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
 # Docker
 Dockerfile*
 docker-compose*
