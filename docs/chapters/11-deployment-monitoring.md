@@ -6,9 +6,9 @@
 
 ---
 
-## 11.1 部署模型
+## 部署模型
 
-### 11.1.1 Docker容器化部署
+### Docker容器化部署
 
 #### Dockerfile
 
@@ -73,7 +73,7 @@ volumes:
   postgres_data:
 ```
 
-### 11.1.2 Java应用启动参数优化
+### Java应用启动参数优化
 
 ```bash
 # 启动脚本
@@ -97,9 +97,9 @@ java $JAVA_OPTS -jar agentscope-textbook-1.0.0.jar
 
 ---
 
-## 11.2 监控与日志
+## 监控与日志
 
-### 11.2.1 日志集成（SLF4J + Logback）
+### 日志集成（SLF4J + Logback）
 
 #### logback-spring.xml
 
@@ -137,7 +137,7 @@ java $JAVA_OPTS -jar agentscope-textbook-1.0.0.jar
 </configuration>
 ```
 
-### 11.2.2 Prometheus + Grafana监控
+### Prometheus + Grafana监控
 
 #### Spring Boot Actuator配置
 
@@ -200,7 +200,7 @@ public class AgentMetrics {
 
 ---
 
-## 11.3 实战：部署多Agent系统到测试环境
+## 实战：部署多Agent系统到测试环境
 
 ### 任务
 
@@ -253,7 +253,7 @@ curl http://localhost:8080/actuator/prometheus
 
 ---
 
-## 11.4 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -263,7 +263,7 @@ curl http://localhost:8080/actuator/prometheus
 
 ---
 
-## 11.5 参考资源
+## 参考资源
 
 - **Docker官方文档**：https://docs.docker.com  
 - **Spring Boot Actuator**：https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html  
@@ -271,7 +271,7 @@ curl http://localhost:8080/actuator/prometheus
 
 ---
 
-## 11.6 本章考核
+## 本章考核
 
 ### 编程题
 

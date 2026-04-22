@@ -6,9 +6,9 @@
 
 ---
 
-## 7.1 AgentScope-Java基础架构
+## AgentScope-Java基础架构
 
-### 7.1.1 核心模块概览
+### 核心模块概览
 
 | 模块 | 包名 | 功能 | 教材对应 |
 |------|------|------|---------|
@@ -18,7 +18,7 @@
 | `agentscope-spring` | `com.alibaba.agentscope.spring` | Spring Boot集成 | 第7章、第11章 |
 | `agentscope-monitor` | `com.alibaba.agentscope.monitor` | 监控与可观测性 | 第11章 |
 
-### 7.1.2 核心类结构
+### 核心类结构
 
 ```java
 // 1. Agent（Agent实例）
@@ -79,9 +79,9 @@ public class AgentRunner {
 
 ---
 
-## 7.2 配置管理
+## 配置管理
 
-### 7.2.1 YAML配置文件结构
+### YAML配置文件结构
 
 ```yaml
 # application.yml
@@ -112,7 +112,7 @@ agentscope:
     metrics-endpoint: /actuator/prometheus
 ```
 
-### 7.2.2 Spring Boot集成
+### Spring Boot集成
 
 ```java
 @Configuration
@@ -157,9 +157,9 @@ public class AgentScopeAutoConfiguration {
 
 ---
 
-## 7.3 Java SE知识衔接点
+## Java SE知识衔接点
 
-### 7.3.1 并发模型
+### 并发模型
 
 | AgentScope-Java特性 | Java SE对应 | 说明 |
 |-------------------|------------|------|
@@ -167,7 +167,7 @@ public class AgentScopeAutoConfiguration {
 | `MemoryManager`多线程访问 | `ConcurrentHashMap` | 线程安全会话管理 |
 | `ToolExecutor`并行执行 | `ExecutorService` | 多工具并发调用 |
 
-### 7.3.2 异常处理
+### 异常处理
 
 | 异常类型 | AgentScope-Java处理 | Java SE最佳实践 |
 |---------|-------------------|---------------|
@@ -175,7 +175,7 @@ public class AgentScopeAutoConfiguration {
 | `TimeoutException` | 降级返回缓存 | 重试+超时控制 |
 | `ConfigurationException` | 启动时抛出 | `@ConfigurationProperties`校验 |
 
-### 7.3.3 设计模式
+### 设计模式
 
 | AgentScope-Java模块 | 设计模式 | 作用 |
 |-------------------|---------|------|
@@ -185,7 +185,7 @@ public class AgentScopeAutoConfiguration {
 
 ---
 
-## 7.4 实战：分析AgentScope-Java配置文件
+## 实战：分析AgentScope-Java配置文件
 
 ### 任务
 
@@ -233,7 +233,7 @@ agentscope:
 
 ---
 
-## 7.5 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -243,7 +243,7 @@ agentscope:
 
 ---
 
-## 7.6 参考资源
+## 参考资源
 
 - **AgentScope-Java官方文档**：https://agentscope.io  
 - **Spring Boot自动配置**：https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.developing-auto-configuration  
@@ -251,7 +251,7 @@ agentscope:
 
 ---
 
-## 7.7 本章考核
+## 本章考核
 
 ### 编程题
 

@@ -6,9 +6,9 @@
 
 ---
 
-## 9.1 Agent安全风险
+## Agent安全风险
 
-### 9.1.1 常见安全威胁
+### 常见安全威胁
 
 | 威胁类型 | 描述 | 案例 | 损害程度 |
 |---------|------|------|---------|
@@ -17,7 +17,7 @@
 | **越权工具调用** | Agent调用其无权访问的工具 | 用户A调用用户B的数据库 | ⚠️ 高 |
 | **数据泄露（PII）** | Agent输出用户隐私信息 | 用户身份证号被写入日志 | ⚠️ 高 |
 
-### 9.1.2 防护原则
+### 防护原则
 
 | 原则 | 实施方式 | AgentScope-Java支持 |
 |------|---------|-------------------|
@@ -28,9 +28,9 @@
 
 ---
 
-## 9.2 输入验证与XSS防护
+## 输入验证与XSS防护
 
-### 9.2.1 代理注入攻击防护
+### 代理注入攻击防护
 
 #### 攻击示例
 
@@ -80,7 +80,7 @@ public class InputFilter {
 }
 ```
 
-### 9.2.2 Java输入校验框架
+### Java输入校验框架
 
 ```java
 // 1. 使用Hibernate Validator
@@ -115,9 +115,9 @@ public class AgentController {
 
 ---
 
-## 9.3 权限管理
+## 权限管理
 
-### 9.3.1 RBAC模型在Agent中的应用
+### RBAC模型在Agent中的应用
 
 #### 角色-权限矩阵
 
@@ -163,7 +163,7 @@ public class PermissionInterceptor {
 }
 ```
 
-### 9.3.2 Spring Security集成
+### Spring Security集成
 
 ```java
 @Configuration
@@ -193,7 +193,7 @@ public class AgentSecurityConfig {
 
 ---
 
-## 9.4 实战：构建带权限控制的Agent应用
+## 实战：构建带权限控制的Agent应用
 
 ### 任务
 
@@ -287,7 +287,7 @@ public class AgentGateway {
 
 ---
 
-## 9.5 本章小结
+## 本章小结
 
 | 要点 | 内容 |
 |------|------|
@@ -297,14 +297,14 @@ public class AgentGateway {
 
 ---
 
-## 9.6 参考资源
+## 参考资源
 
 - **OWASP Top 10**：https://owasp.org/www-project-top-ten/  
 - **Spring Security文档**：https://docs.spring.io/spring-security/reference/  
 
 ---
 
-## 9.7 本章考核
+## 本章考核
 
 ### 编程题
 
