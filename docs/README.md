@@ -6,19 +6,19 @@
 
 ```
 chapters/                # 教材章节（13章）
-  ├── 01-intro.md       # 第1章：认识AI Agent
-  ├── 02-prompting.md   # 第2章：提示词工程与LLM API接入
-  ├── 03-api-practice.md# 第3章：本地与云端API接入实践
-  ├── 04-agent-architecture.md
-  ├── 05-memory-rag.md
-  ├── 06-multimodal.md
-  ├── 07-agentscope-core.md
-  ├── 08-multi-agent.md
-  ├── 09-security.md
-  ├── 10-evaluation.md
-  ├── 11-deployment-monitoring.md
-  ├── 12-documentation.md
-  └── 13-capstone.md
+  ├── 01-introduction/    # 第1章：认识AI Agent
+  ├── 02-prompt-engineering/  # 第2章：提示词工程与LLM API接入
+  ├── 03-api-integration/  # 第3章：本地与云端API接入实践
+  ├── 04-agent-architecture/  # 第4章：Agent架构设计
+  ├── 05-memory-rag/  # 第5章：记忆与RAG
+  ├── 06-multimodal/  # 第6章：多模态
+  ├── 07-agentscope-core/  # 第7章：AgentScope-Java核心模块
+  ├── 08-multi-agent/  # 第8章：多Agent协作
+  ├── 09-security/  # 第9章：安全与防护
+  ├── 10-performance/  # 第10章：性能优化
+  ├── 11-deployment/  # 第11章：部署与监控
+  ├── 12-documentation/  # 第12章：文档与规范
+  └── 13-capstone/  # 第13章：Capstone项目
 ```
 
 ## 自动化排版管线
@@ -26,7 +26,7 @@ chapters/                # 教材章节（13章）
 ### 编译为PDF
 
 ```bash
-pandoc chapters/01-intro.md \
+pandoc chapters/01-introduction/1.1-why-need.md \
   --from=markdown \
   --to=pdf \
   --output=dist/Chapter1.pdf \
