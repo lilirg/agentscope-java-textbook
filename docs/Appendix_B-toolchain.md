@@ -1,10 +1,4 @@
----
-title: 工具链速查表
-chapter: Appendix B
-keywords: toolchain, quick reference, jdk, ide, maven, git, api, environment
-version: B.0
----
-
+﻿
 # 附录B：工具链速查表
 
 > 本附录提供Agent开发相关工具链的快速参考，方便开发过程中查阅
