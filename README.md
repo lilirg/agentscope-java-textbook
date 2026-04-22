@@ -52,15 +52,12 @@ agentscope-java-textbook/
 │   ├── Appendix_*.md     # 附录（API对比、模型列表、FAQ等）
 │   ├── .vitepress/       # VitePress配置（可选）
 │   └── README.md         # docs目录说明
-├── scripts/              # 自动化脚本（构建、测试、生成）
+├── scripts/              # 自动化脚本（构建、测试、生成）- 空目录
 ├── examples/             # 完整项目案例
 │   └── capstone/         # Capstone项目模板
 ├── LICENSE.md            # 许可证文件
 ├── README.md             # 项目说明（本文件）
-├── PROJECT_README.md     # 项目详细说明
-├── BUILD_GUIDE.md        # 构建指南
-├── TEACHING_PLAN.md      # 教学计划
-└── RELEASE_NOTES.md      # 版本更新日志
+└── BUILD_GUIDE.md        # 构建指南（Maven/Spring Boot，可选）
 ```
 
 > 💡 **项目结构说明**
