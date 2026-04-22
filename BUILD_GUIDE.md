@@ -102,7 +102,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8080"
 
 ```bash
 # Windows
-pandoc docs/chapters/01-intro.md ^
+pandoc docs/chapters/01-introduction/1.1-why-need.md ^
   --from=markdown ^
   --to=pdf ^
   --output=dist/Chapter1.pdf ^

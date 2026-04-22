@@ -23,22 +23,50 @@
 
 ```
 agentscope-java-textbook/
-├── docs/                 # 教材源文档（Markdown）
-│   ├── chapters/         # 分章节内容（13章）
-│   ├── Appendix/         # 附录（API对比、模型列表等）
-│   └── templates/        # 文档模板（ARCHITECTURE.md、AGENTS.md等）
-├── src/                  # 示例代码（Java）
-│   ├── chapter2/         # 第2章提示词工程示例
-│   ├── chapter4/         # 第4章Agent架构示例
-│   └── chapter8/         # 第8章多Agent协作示例
-├── examples/             # 完整项目案例
-│   └── capstone/         # Capstone项目模板
+├── .github/              # GitHub CI/CD 配置
+│   └── workflows/        # GitHub Actions 工作流
+│       ├── build.yml     # 构建工作流（Markdown检查、链接检查）
+│       ├── deploy.yml    # 部署工作流（自动发布）
+│       └── static.yml    # 静态检查工作流
 ├── config/               # 自动化排版管线配置
 │   ├── pandoc/           # Pandoc配置
+│   │   └── README.md     # Pandoc使用说明
 │   └── latex/            # LaTeX模板
-├── LICENSE
-└── README.md             # 本文件
+│       ├── metadata.yml  # 元数据配置
+│       └── styles.css    # 样式配置
+├── docs/                 # 教材源文档（Markdown）
+│   ├── chapters/         # 分章节内容（13章）
+│   │   ├── 01-introduction/      # 第1章：简介
+│   │   ├── 02-prompt-engineering/ # 第2章：提示词工程
+│   │   ├── 03-api-integration/   # 第3章：API集成
+│   │   ├── 04-agent-architecture/ # 第4章：Agent架构
+│   │   ├── 05-memory-rag/        # 第5章：记忆与RAG
+│   │   ├── 06-multimodal/        # 第6章：多模态
+│   │   ├── 07-agentscope-core/   # 第7章：AgentScope核心
+│   │   ├── 08-multi-agent/       # 第8章：多Agent协作
+│   │   ├── 09-security/          # 第9章：安全
+│   │   ├── 10-performance/       # 第10章：性能
+│   │   ├── 11-deployment/        # 第11章：部署
+│   │   ├── 12-documentation/     # 第12章：文档
+│   │   └── 13-capstone/          # 第13章：毕业设计
+│   ├── Appendix_*.md     # 附录（API对比、模型列表、FAQ等）
+│   ├── .vitepress/       # VitePress配置（可选）
+│   └── README.md         # docs目录说明
+├── scripts/              # 自动化脚本（构建、测试、生成）
+├── examples/             # 完整项目案例
+│   └── capstone/         # Capstone项目模板
+├── LICENSE.md            # 许可证文件
+├── README.md             # 项目说明（本文件）
+├── PROJECT_README.md     # 项目详细说明
+├── BUILD_GUIDE.md        # 构建指南
+├── TEACHING_PLAN.md      # 教学计划
+└── RELEASE_NOTES.md      # 版本更新日志
 ```
+
+> 💡 **项目结构说明**
+> - 所有章节按 `XX-topic/` 格式组织，便于版本管理和查找
+> - `docs/` 目录是主要开发区域，包含全部教材内容
+> - `config/` 目录包含自动化排版管线配置，支持 PDF/EPUB/HTML 输出
 
 ---
 
@@ -53,17 +81,17 @@ agentscope-java-textbook/
 # 1. 安装 Pandoc (https://pandoc.org/installing.html)
 # 2. 安装 TeX Live (https://www.tug.org/texlive/)
 
-# 编译PDF
-pandoc docs/chapters/01-intro.md \
+# 编译PDF（示例：编译第1章第1节）
+pandoc docs/chapters/01-introduction/1.1-why-need.md \
   --from=markdown \
   --to=pdf \
-  --output=dist/Chapter1.pdf \
+  --output=dist/Chapter1-Section1.pdf \
   --pdf-engine=xelatex \
   --metadata-file=config/latex/metadata.yml \
   --css=config/latex/styles.css
 
-# 编译EPUB
-pandoc docs/chapters/*.md \
+# 编译EPUB（示例：编译第1章所有分节文件）
+pandoc docs/chapters/01-introduction/*.md \
   --from=markdown \
   --to=epub3 \
   --output=dist/Textbook.epub

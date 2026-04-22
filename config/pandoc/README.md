@@ -9,7 +9,7 @@
 ### 编译PDF
 
 ```bash
-pandoc chapters/01-intro.md \
+pandoc chapters/01-introduction/1.1-why-need.md \
   --from=markdown \
   --to=pdf \
   --output=dist/Chapter1.pdf \

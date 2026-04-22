@@ -72,7 +72,7 @@ mvn clean compile
 ```bash
 # 安装Pandoc和TeX Live（参考BUILD_GUIDE.md）
 # 编译PDF
-pandoc docs/chapters/01-intro.md --from=markdown --to=pdf --output=dist/Chapter1.pdf
+pandoc docs/chapters/01-introduction/1.1-why-need.md --from=markdown --to=pdf --output=dist/Chapter1.pdf
 ```
 
 ---
