@@ -5,6 +5,7 @@ export default defineConfig({
   description: '从零到企业级 AI 应用开发',
   lang: 'zh-CN',
   ignoreDeadLinks: true,
+  base: '/agentscope-java-textbook/',
 
   themeConfig: {
     nav: [
