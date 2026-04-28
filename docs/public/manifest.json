@@ -1,0 +1,24 @@
+{
+  "name": "AgentScope-Java 实战",
+  "short_name": "AgentScope-Java",
+  "description": "从零到企业级 AI 应用开发教材",
+  "start_url": "/agentscope-java-textbook/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4A90E2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/agentscope-java-textbook/icons/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/agentscope-java-textbook/icons/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

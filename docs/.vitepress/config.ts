@@ -6,6 +6,14 @@ export default defineConfig({
   lang: 'zh-CN',
   ignoreDeadLinks: true,
   base: '/agentscope-java-textbook/',
+  head: [
+    ['link', { rel: 'icon', href: '/agentscope-java-textbook/icons/pwa-192.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/agentscope-java-textbook/icons/pwa-192.png' }],
+    ['link', { rel: 'manifest', href: '/agentscope-java-textbook/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#4A90E2' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
+  ],
 
   themeConfig: {
     nav: [
